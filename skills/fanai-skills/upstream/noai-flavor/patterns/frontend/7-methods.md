@@ -268,7 +268,7 @@ AI 会把视觉参数和文本的情感特征对齐。
 - ...
 ```
 
-完整模板：[`prompts/frontend/anti-ai-web.md`](../prompts/frontend/anti-ai-web.md)
+完整模板：[`prompts/frontend/anti-ai-web.md`](../../prompts/frontend/anti-ai-web.md)
 
 ---
 
@@ -395,7 +395,7 @@ AI 为了保险，默认选最主流的：
 1. 安装 Context7 插件（实时查询文档）
 2. 或者直接把官方文档 URL 发给 AI
 
-完整列表：[`resources/ui-libraries.md`](../resources/ui-libraries.md)
+完整列表：[`resources/ui-libraries.md`](../../resources/ui-libraries.md)
 
 ---
 
@@ -464,7 +464,7 @@ AI 默认会用：
 --color-primary: #8B4513;
 ```
 
-完整指南：[`resources/color-tools.md`](../resources/color-tools.md)
+完整指南：[`resources/color-tools.md`](../../resources/color-tools.md)
 
 ---
 
@@ -521,7 +521,7 @@ AI 默认会用：
 
 ## 实战案例
 
-完整案例对比：[`examples/before-after/frontend/case-studies.md`](../examples/before-after/frontend/case-studies.md)
+完整案例对比：[`examples/before-after/frontend/case-studies.md`](../../examples/before-after/frontend/case-studies.md)
 
 包含：
 - 个人技术博客

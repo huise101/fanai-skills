@@ -1,6 +1,6 @@
 # 完整来源阅读地图
 
-本文件由scripts/sync_sources.py按固定版本生成。完整集合覆盖三个上游的全部72个Git跟踪文件；原始ZIP保留原始文件名和字节，可浏览镜像将SKILL.md改名为SKILL.source.md，并仅调整相关本地Markdown链接，避免被当成额外技能加载。
+本文件由scripts/sync_sources.py按固定版本生成。完整集合覆盖三个上游的全部72个Git跟踪文件；原始ZIP保留原始文件名和字节。可浏览镜像将SKILL.md改名为SKILL.source.md并调整相关链接，另修复上游继承的5个坏相对链接；每项变换均记录在manifest，原始ZIP不变。
 
 ## 每次任务的必读组
 
@@ -11,6 +11,10 @@
 - 普通文章：common-text + writing + text-examples；公众号/知乎/小红书另加wechat/zhihu/xiaohongshu对应组。
 - 网页：web + web-examples；涉及成段文案时另加common-text。
 - 安装/集成/来源核验：按manifest中documentation/tooling/license/asset角色查看原始资料；这些内容也完整收录，但不是每次润色必须重复读取的写作规则。
+
+## 阅读上游示例时
+
+Before/After是表达示意，不保证After的所有事实都在Before出现；有些After新增表号、p值、数据集、数值、初步图或合作信，不能由此推导或移植到用户稿件。NSF示例的funded/permission是上游作者的来源声明，不表示当前用户有同样经历或可冒用正文。
 
 ## 仅给仓库URL时
 

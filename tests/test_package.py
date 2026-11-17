@@ -64,6 +64,29 @@ class CompleteSourceTests(unittest.TestCase):
         self.assertEqual({x["name"]: len(x["files"]) for x in manifest["sources"]},
                          {"anti-defensive-writing-Skill": 14, "academic-humanizer": 10, "noai-flavor": 48})
 
+    def test_inherited_link_repairs_are_logged_without_changing_original_zip(self):
+        manifest = json.loads((validate.SKILL / "upstream" / "manifest.json").read_text(encoding="utf-8"))
+        changes = [t for s in manifest["sources"] for f in s["files"]
+                   for t in f["mirror_transformations"] if t["kind"] == "upstream-link-repair"]
+        self.assertEqual(len(changes), 5)
+        with zipfile.ZipFile(validate.SKILL / "upstream" / "archives" / "noai-flavor.zip") as archive:
+            original = archive.read("patterns/frontend/7-methods.md")
+        mirror = (validate.SKILL / "upstream" / "noai-flavor" / "patterns" / "frontend" / "7-methods.md").read_bytes()
+        self.assertIn(b"](../prompts/frontend/anti-ai-web.md)", original)
+        self.assertIn(b"](../../prompts/frontend/anti-ai-web.md)", mirror)
+        self.assertEqual(validate.validate_tree(validate.SKILL), [])
+
+    def test_missing_transformation_log_is_detected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            copy = Path(directory) / validate.NAME
+            shutil.copytree(validate.SKILL, copy)
+            path = copy / "upstream" / "manifest.json"
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            changed = next(f for s in manifest["sources"] for f in s["files"] if f["mirror_modified"])
+            del changed["mirror_transformations"]
+            path.write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
+            self.assertTrue(any("transformation log" in e for e in source_bundle.verify_bundle(copy)))
+
     def test_original_entries_cannot_activate_extra_skills(self):
         self.assertEqual(len(list(validate.SKILL.rglob("SKILL.md"))), 1)
         self.assertEqual(len(list(validate.SKILL.rglob("SKILL.source.md"))), 3)

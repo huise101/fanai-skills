@@ -102,17 +102,16 @@ def validate_tree(root: Path) -> list[str]:
             errors.append(f"{rel}: BOM, replacement character, or NUL detected")
         if home_windows.search(text) or home_unix.search(text) or drive_path.search(text):
             errors.append(f"{rel}: machine-specific absolute path detected")
-        # Preserve upstream source data; its full checksums are checked separately.
-        if "upstream" in path.relative_to(root).parts:
-            continue
-        if path.suffix == ".py":
+        # Upstream scripts are reference data, not executable package code.
+        archived = "upstream" in path.relative_to(root).parts
+        if not archived and path.suffix == ".py":
             try:
                 ast.parse(text, filename=rel)
             except SyntaxError as exc:
                 errors.append(f"{rel}: {exc}")
         if path.suffix != ".md":
             continue
-        if re.search(r"\[TODO\b|\bTODO:", text):
+        if not archived and re.search(r"\[TODO\b|\bTODO:", text):
             errors.append(f"{rel}: unfinished template")
         for raw in link_pattern.findall(text):
             dest = raw.strip().split(" \"", 1)[0].strip("<>")

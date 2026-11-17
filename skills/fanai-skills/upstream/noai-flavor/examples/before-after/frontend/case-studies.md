@@ -176,7 +176,7 @@
 
 ### 1. 使用 AGENTS.md 文件
 
-将 [`prompts/frontend/anti-ai-web.md`](../prompts/frontend/anti-ai-web.md) 的内容保存为 `AGENTS.md`，放在项目根目录。
+将 [`prompts/frontend/anti-ai-web.md`](../../../prompts/frontend/anti-ai-web.md) 的内容保存为 `AGENTS.md`，放在项目根目录。
 
 AI 编程工具会自动读取并遵守规则。
 

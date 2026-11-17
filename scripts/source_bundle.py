@@ -94,6 +94,12 @@ def verify_bundle(skill: Path) -> list[str]:
                     path = base / mirror
                     if not path.is_file() or digest(path.read_bytes()) != item.get("mirror_sha256"):
                         errors.append(f"{name}/{original}: browsable mirror missing/changed")
+                    transformations = item.get("mirror_transformations")
+                    if not isinstance(transformations, list) or item.get("mirror_modified") != bool(transformations):
+                        errors.append(f"{name}/{original}: missing/inconsistent mirror transformation log")
+                    elif any(t.get("kind") not in {"rename-entry", "renamed-skill-link", "upstream-link-repair"}
+                             or not t.get("from") or not t.get("to") for t in transformations):
+                        errors.append(f"{name}/{original}: invalid mirror transformation record")
                     if item.get("role") not in {"rule", "example", "documentation", "asset", "license", "tooling"}:
                         errors.append(f"{name}/{original}: unclassified coverage")
                     if item.get("role") == "rule" and not item.get("read_groups"):

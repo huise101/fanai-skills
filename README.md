@@ -1,6 +1,6 @@
 # 反aiskills
 
-**完整集合版 v2.0.0：一个技能入口，收齐三个来源的全部资料，并执行必读与逐项验收。**
+**完整集合版 v2.0.1：一个技能入口，收齐三个来源的全部资料，并执行必读与逐项验收。**
 
 面向中文和英文：论文、摘要、引言、结论、rebuttal、基金申请、普通文章、平台文案，以及网页去模板化。改的是表达、叙事和视觉模板，不是事实。
 
@@ -23,7 +23,7 @@
 | noai-flavor | 48 | [全部文件](skills/fanai-skills/upstream/noai-flavor/) |
 | **合计** | **72** | **41份规则文件全部进入适用阅读组** |
 
-包括中英文SKILL、提示词、全部patterns、平台/前端规则、案例、资源推荐、集成文档、图像、源码和许可证。另提供 [三个原始ZIP](skills/fanai-skills/upstream/archives/) 保留原始路径与全部字节；[逐文件清单](skills/fanai-skills/upstream/manifest.json) 记录commit、Git blob和SHA256。可浏览镜像仅将原版 `SKILL.md` 改名以避免多技能激活，并调整相关本地链接；原始ZIP不做这些变更。
+包括中英文SKILL、提示词、全部patterns、平台/前端规则、案例、资源推荐、集成文档、图像、源码和许可证。另提供 [三个原始ZIP](skills/fanai-skills/upstream/archives/) 保留原始路径与全部字节；[逐文件清单](skills/fanai-skills/upstream/manifest.json) 记录commit、Git blob和SHA256。可浏览镜像将原版 `SKILL.md` 改名以避免多技能激活并调整相关链接，另修复了上游继承的5个坏相对链接；变换逐项记录在清单中，原始ZIP不做这些变更。
 
 范围是最初给出的三个不同仓库（重复链接只计一次），不递归搬运其提及的所有第三方网站、工具或ARMS研究流水线。来源、版权和改编说明见 [NOTICE](skills/fanai-skills/NOTICE.md)。
 
