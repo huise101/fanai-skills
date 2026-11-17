@@ -1,4 +1,4 @@
 interface:
   display_name: "反aiskills"
-  short_description: "去除防御性写作与模板化AI语言，保留事实、证据和作者风格"
-  default_prompt: "使用 $fanai-skills 改善下面文本的表达，去除防御性写作与模板感，保留全部事实、数值和引用。"
+  short_description: "完整集合反防御性与去AI味规则，按文体必读并逐项验收"
+  default_prompt: "使用 $fanai-skills 先读取当前文体的完整适用规则，再修改并逐项验收下面文本，保留事实、数值、公式、引用与必要限定。"

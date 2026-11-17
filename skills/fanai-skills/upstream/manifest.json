@@ -1,0 +1,1083 @@
+{
+  "schema_version": 1,
+  "pinned_date": "2026-11-17",
+  "sources": [
+    {
+      "name": "anti-defensive-writing-Skill",
+      "url": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill",
+      "commit": "e65bd9d8bf8ed8b9af809e5aff8237d76370876d",
+      "tracked_file_count": 14,
+      "archive": {
+        "path": "archives/anti-defensive-writing-Skill.zip",
+        "sha256": "591e8b94ffe5fc8925f47afa6b646598df934df7590200bc6a1ac7800ba38236"
+      },
+      "files": [
+        {
+          "path": ".agents/plugins/marketplace.json",
+          "git_blob": "b5b1d35bdade0903451afc793082f8c3f29c8500",
+          "mode": "100644",
+          "sha256": "3329fe4e2c1b1374b361830ab2b6e7d9ece9344e1f48aae0cbcba39458857c72",
+          "bytes": 384,
+          "mirror": "anti-defensive-writing-Skill/.agents/plugins/marketplace.json",
+          "mirror_sha256": "3329fe4e2c1b1374b361830ab2b6e7d9ece9344e1f48aae0cbcba39458857c72",
+          "mirror_modified": false,
+          "role": "tooling",
+          "read_groups": []
+        },
+        {
+          "path": ".codex-plugin/plugin.json",
+          "git_blob": "2675367b6a6b930ffca438293eb548849f64c6a6",
+          "mode": "100644",
+          "sha256": "80adc1f2721190e043d502bec1b56ae12b2187744784e6a6e23c8b37477c5636",
+          "bytes": 2543,
+          "mirror": "anti-defensive-writing-Skill/.codex-plugin/plugin.json",
+          "mirror_sha256": "80adc1f2721190e043d502bec1b56ae12b2187744784e6a6e23c8b37477c5636",
+          "mirror_modified": false,
+          "role": "tooling",
+          "read_groups": []
+        },
+        {
+          "path": ".gitignore",
+          "git_blob": "b86218738bb8261d81bb7b7929f6d2164f240eed",
+          "mode": "100644",
+          "sha256": "9a63ef79ebe01b3cd0d4fe359a79d160f6eeac48a77ee50c4ee7bed6c13ed9da",
+          "bytes": 29,
+          "mirror": "anti-defensive-writing-Skill/.gitignore",
+          "mirror_sha256": "9a63ef79ebe01b3cd0d4fe359a79d160f6eeac48a77ee50c4ee7bed6c13ed9da",
+          "mirror_modified": false,
+          "role": "tooling",
+          "read_groups": []
+        },
+        {
+          "path": "LICENSE",
+          "git_blob": "f2fddc5f2ad65725f5f95a3ca48c90c6d146ecd5",
+          "mode": "100644",
+          "sha256": "fdf440e5214588d9edcdc1ec315cddbd8525fe509242c24989a8472d283325f4",
+          "bytes": 1069,
+          "mirror": "anti-defensive-writing-Skill/LICENSE",
+          "mirror_sha256": "fdf440e5214588d9edcdc1ec315cddbd8525fe509242c24989a8472d283325f4",
+          "mirror_modified": false,
+          "role": "license",
+          "read_groups": []
+        },
+        {
+          "path": "PRIVACY.md",
+          "git_blob": "e2e10cc66df581f822f82c1a2b8c3e79d55832f6",
+          "mode": "100644",
+          "sha256": "6fa49bf747275e4c1073ba5ffd9dcb7ce374831e4c361b52b4b4ae09ca8192d3",
+          "bytes": 1508,
+          "mirror": "anti-defensive-writing-Skill/PRIVACY.md",
+          "mirror_sha256": "6fa49bf747275e4c1073ba5ffd9dcb7ce374831e4c361b52b4b4ae09ca8192d3",
+          "mirror_modified": false,
+          "role": "documentation",
+          "read_groups": []
+        },
+        {
+          "path": "README.md",
+          "git_blob": "c203049dda4b61fb4564820f2677a5d3fa9dfe77",
+          "mode": "100644",
+          "sha256": "7fdd21350a954984b0d0ea26df886a46eb20e3c9deef19e9ccb2b37c6984d5a8",
+          "bytes": 4801,
+          "mirror": "anti-defensive-writing-Skill/README.md",
+          "mirror_sha256": "92cad76f35e814bdd8746d0ad5abc5dd744668228ecbf1e69a743f35a4a4e0ab",
+          "mirror_modified": true,
+          "role": "documentation",
+          "read_groups": []
+        },
+        {
+          "path": "README_EN.md",
+          "git_blob": "cdf2d871778ad8f7bb5c8cd4f8c0279658825aa4",
+          "mode": "100644",
+          "sha256": "940477bec8392cf5cffb6f6f623e178fc6dab3c86dfebf303c4757c0f2f9a67f",
+          "bytes": 5141,
+          "mirror": "anti-defensive-writing-Skill/README_EN.md",
+          "mirror_sha256": "24387f49c9c332dd23f2e9d22dabd894ad70aa66168220b9c965292b47c0b74e",
+          "mirror_modified": true,
+          "role": "documentation",
+          "read_groups": []
+        },
+        {
+          "path": "assets/icon.svg",
+          "git_blob": "9a71d7657e7c6fd548b3008719b7b8cb24a704c0",
+          "mode": "100644",
+          "sha256": "ed7e0b0a79900f217f623cdb63bf9b4e61130df5185153d3c6eeb6a898b4e7e9",
+          "bytes": 377,
+          "mirror": "anti-defensive-writing-Skill/assets/icon.svg",
+          "mirror_sha256": "ed7e0b0a79900f217f623cdb63bf9b4e61130df5185153d3c6eeb6a898b4e7e9",
+          "mirror_modified": false,
+          "role": "asset",
+          "read_groups": []
+        },
+        {
+          "path": "plugin.json",
+          "git_blob": "1b3d380c97ea9059605807c670dbb1e0ffd01d22",
+          "mode": "100644",
+          "sha256": "e8fa28c6d7508148be05f719081d453c3eae60aa39ad6c15b422d1dcb0f1228a",
+          "bytes": 2693,
+          "mirror": "anti-defensive-writing-Skill/plugin.json",
+          "mirror_sha256": "e8fa28c6d7508148be05f719081d453c3eae60aa39ad6c15b422d1dcb0f1228a",
+          "mirror_modified": false,
+          "role": "tooling",
+          "read_groups": []
+        },
+        {
+          "path": "prompts/quick-prompt-en.txt",
+          "git_blob": "e8442b727a16208f7457c4c98936d41d44194295",
+          "mode": "100644",
+          "sha256": "e771ee6efe1cfdf83ada543963cbe5f0c485f43781d6354d5c6c3dfaacbff16a",
+          "bytes": 2424,
+          "mirror": "anti-defensive-writing-Skill/prompts/quick-prompt-en.txt",
+          "mirror_sha256": "e771ee6efe1cfdf83ada543963cbe5f0c485f43781d6354d5c6c3dfaacbff16a",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "anti-en"
+          ]
+        },
+        {
+          "path": "prompts/精简版提示词.txt",
+          "git_blob": "235d3d4ec3df526b027920286424121e1864e682",
+          "mode": "100644",
+          "sha256": "8a52d3a5d5def26d22acf9024ab31169f74cc4d944e1b6a7c6280c3886a01e86",
+          "bytes": 1910,
+          "mirror": "anti-defensive-writing-Skill/prompts/精简版提示词.txt",
+          "mirror_sha256": "8a52d3a5d5def26d22acf9024ab31169f74cc4d944e1b6a7c6280c3886a01e86",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "anti-zh"
+          ]
+        },
+        {
+          "path": "scripts/build_plugin.py",
+          "git_blob": "9889523d203fe60ce07462ebdb01c3f145f9ae09",
+          "mode": "100644",
+          "sha256": "e1789db8a776c503542f91f888964b3ad1d5660eaf200790e57fb84d03498468",
+          "bytes": 988,
+          "mirror": "anti-defensive-writing-Skill/scripts/build_plugin.py",
+          "mirror_sha256": "e1789db8a776c503542f91f888964b3ad1d5660eaf200790e57fb84d03498468",
+          "mirror_modified": false,
+          "role": "tooling",
+          "read_groups": []
+        },
+        {
+          "path": "skills/anti-defensive-writing-en/SKILL.md",
+          "git_blob": "87a163642daa5674a7fed82eb9112ae703ee0e73",
+          "mode": "100644",
+          "sha256": "49705a92677d06b1be9f78be5be4f966b1d30c4ed72a3b97c86a973d06683b9b",
+          "bytes": 6419,
+          "mirror": "anti-defensive-writing-Skill/skills/anti-defensive-writing-en/SKILL.source.md",
+          "mirror_sha256": "49705a92677d06b1be9f78be5be4f966b1d30c4ed72a3b97c86a973d06683b9b",
+          "mirror_modified": true,
+          "role": "rule",
+          "read_groups": [
+            "anti-en"
+          ]
+        },
+        {
+          "path": "skills/anti-defensive-writing/SKILL.md",
+          "git_blob": "59879391d4e7eda0d0017cff89f1ecf0b2566b8c",
+          "mode": "100644",
+          "sha256": "6f072e66f6adf813bc1b4291754f2bc07ed4e65a398359844e97bfa215a1c28e",
+          "bytes": 5523,
+          "mirror": "anti-defensive-writing-Skill/skills/anti-defensive-writing/SKILL.source.md",
+          "mirror_sha256": "6f072e66f6adf813bc1b4291754f2bc07ed4e65a398359844e97bfa215a1c28e",
+          "mirror_modified": true,
+          "role": "rule",
+          "read_groups": [
+            "anti-zh"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "academic-humanizer",
+      "url": "https://github.com/AIScientists-Dev/academic-humanizer",
+      "commit": "94b88b23703bed7df507acae7d6d5876209a0cdf",
+      "tracked_file_count": 10,
+      "archive": {
+        "path": "archives/academic-humanizer.zip",
+        "sha256": "bd0e3c4029052f0739e823335d80afb5dcfe3938547f0670be6d744b9e704ad9"
+      },
+      "files": [
+        {
+          "path": ".gitignore",
+          "git_blob": "e43b0f988953ae3a84b00331d0ccf5f7d51cb3cf",
+          "mode": "100644",
+          "sha256": "cf237c7aff44efbe6e502e645c3e06da03a69d7bdeb43392108ef3348143417e",
+          "bytes": 10,
+          "mirror": "academic-humanizer/.gitignore",
+          "mirror_sha256": "cf237c7aff44efbe6e502e645c3e06da03a69d7bdeb43392108ef3348143417e",
+          "mirror_modified": false,
+          "role": "tooling",
+          "read_groups": []
+        },
+        {
+          "path": "LICENSE",
+          "git_blob": "a4bc177491beda92665d628d86299630ac0abefa",
+          "mode": "100644",
+          "sha256": "95201f07cd5d4454f205a53a65337cbe00298a4d21a4e68a1fc516958e7cdaf9",
+          "bytes": 890,
+          "mirror": "academic-humanizer/LICENSE",
+          "mirror_sha256": "95201f07cd5d4454f205a53a65337cbe00298a4d21a4e68a1fc516958e7cdaf9",
+          "mirror_modified": false,
+          "role": "license",
+          "read_groups": []
+        },
+        {
+          "path": "README.md",
+          "git_blob": "1de4a538786dd3651acc3c21b6a3bfe2634b8514",
+          "mode": "100644",
+          "sha256": "ed40692dbee51ed2f2c53a02c7c34772ce23f94cab2394877544e98c0b445b54",
+          "bytes": 6205,
+          "mirror": "academic-humanizer/README.md",
+          "mirror_sha256": "50d128e5e161c9217db91f8c8c3d7ef25e0a901cffd4e1e9e643137e4dfe1170",
+          "mirror_modified": true,
+          "role": "documentation",
+          "read_groups": []
+        },
+        {
+          "path": "SKILL.md",
+          "git_blob": "afb7d8da3cba41b47365730ceed40fa5a72d8097",
+          "mode": "100644",
+          "sha256": "1f4501cb7331cffe9018960f8db045c719eea0658ce04e4af5e273ee59785a9c",
+          "bytes": 16779,
+          "mirror": "academic-humanizer/SKILL.source.md",
+          "mirror_sha256": "1f4501cb7331cffe9018960f8db045c719eea0658ce04e4af5e273ee59785a9c",
+          "mirror_modified": true,
+          "role": "rule",
+          "read_groups": [
+            "academic",
+            "proposal"
+          ]
+        },
+        {
+          "path": "assets/banner.svg",
+          "git_blob": "f70581d539975f10541c6462312e795bed3261e6",
+          "mode": "100644",
+          "sha256": "e3a332cac2dcb74c57137ed29231bc154534191827f1d8488201440e7e6803cb",
+          "bytes": 1374,
+          "mirror": "academic-humanizer/assets/banner.svg",
+          "mirror_sha256": "e3a332cac2dcb74c57137ed29231bc154534191827f1d8488201440e7e6803cb",
+          "mirror_modified": false,
+          "role": "asset",
+          "read_groups": []
+        },
+        {
+          "path": "assets/rednote-zh.png",
+          "git_blob": "dcdfe969098753b633d0f51462ad87b4f5d542e1",
+          "mode": "100644",
+          "sha256": "cf1ada64d95deef03b484e5d27421fd47a5591ea255aceedf955d4af3d43eb53",
+          "bytes": 106124,
+          "mirror": "academic-humanizer/assets/rednote-zh.png",
+          "mirror_sha256": "cf1ada64d95deef03b484e5d27421fd47a5591ea255aceedf955d4af3d43eb53",
+          "mirror_modified": false,
+          "role": "asset",
+          "read_groups": []
+        },
+        {
+          "path": "assets/rednote-zh.svg",
+          "git_blob": "23b3699f8d18a2dcdf1ed7c7e21c5537db26986b",
+          "mode": "100644",
+          "sha256": "935e4c7d9c2606a652fc5710dd4b33a087a00e08d93aa6eba3a772bbe1a7a153",
+          "bytes": 1649,
+          "mirror": "academic-humanizer/assets/rednote-zh.svg",
+          "mirror_sha256": "935e4c7d9c2606a652fc5710dd4b33a087a00e08d93aa6eba3a772bbe1a7a153",
+          "mirror_modified": false,
+          "role": "asset",
+          "read_groups": []
+        },
+        {
+          "path": "assets/x-en.png",
+          "git_blob": "41fab051be7da545396a0dc276d67b2b10a36234",
+          "mode": "100644",
+          "sha256": "016424a96666490e96802b9900fd6047f1297e313bcd526cdef03c6c15659615",
+          "bytes": 169099,
+          "mirror": "academic-humanizer/assets/x-en.png",
+          "mirror_sha256": "016424a96666490e96802b9900fd6047f1297e313bcd526cdef03c6c15659615",
+          "mirror_modified": false,
+          "role": "asset",
+          "read_groups": []
+        },
+        {
+          "path": "assets/x-en.svg",
+          "git_blob": "14c9de997c006c5b491c7139c1bd1854056f7918",
+          "mode": "100644",
+          "sha256": "7b699c6b14a6be52eb0722db513e52156f814b7d0b17f50a7fe01171abba5f01",
+          "bytes": 1587,
+          "mirror": "academic-humanizer/assets/x-en.svg",
+          "mirror_sha256": "7b699c6b14a6be52eb0722db513e52156f814b7d0b17f50a7fe01171abba5f01",
+          "mirror_modified": false,
+          "role": "asset",
+          "read_groups": []
+        },
+        {
+          "path": "examples/before-after.md",
+          "git_blob": "17643504877d54bbf9f87fa405e6fd87e893dcae",
+          "mode": "100644",
+          "sha256": "60e73dfa2bab743998af2ed389b9afffa38e2c63e7248fca48bae32a19458a5e",
+          "bytes": 6949,
+          "mirror": "academic-humanizer/examples/before-after.md",
+          "mirror_sha256": "60e73dfa2bab743998af2ed389b9afffa38e2c63e7248fca48bae32a19458a5e",
+          "mirror_modified": false,
+          "role": "example",
+          "read_groups": [
+            "academic-examples",
+            "proposal-examples"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "noai-flavor",
+      "url": "https://github.com/yiancode/noai-flavor",
+      "commit": "ae232f32bb7a3e7ff310b8bccceaeaf60dbc25d8",
+      "tracked_file_count": 48,
+      "archive": {
+        "path": "archives/noai-flavor.zip",
+        "sha256": "3e0e30a681c7b93dccb6e8d49f94b534ab211c9e2e8b9f26da8e6cb0f294a3c0"
+      },
+      "files": [
+        {
+          "path": ".gitignore",
+          "git_blob": "bf439c56f2667de16cd321556edf165eba14fc3d",
+          "mode": "100644",
+          "sha256": "9c9608487cf9ca5c6e25e4095a80824456c19b82296c3645453b5dc55d25dfaa",
+          "bytes": 166,
+          "mirror": "noai-flavor/.gitignore",
+          "mirror_sha256": "9c9608487cf9ca5c6e25e4095a80824456c19b82296c3645453b5dc55d25dfaa",
+          "mirror_modified": false,
+          "role": "tooling",
+          "read_groups": []
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "git_blob": "907a09e9f1c03c783e14b1a39d36c98e27184b01",
+          "mode": "100644",
+          "sha256": "42a367bb3a926dc5b1763fc259301e3c66b604aefd1f2f0fbf20bc5c17df3666",
+          "bytes": 1435,
+          "mirror": "noai-flavor/CONTRIBUTING.md",
+          "mirror_sha256": "42a367bb3a926dc5b1763fc259301e3c66b604aefd1f2f0fbf20bc5c17df3666",
+          "mirror_modified": false,
+          "role": "documentation",
+          "read_groups": []
+        },
+        {
+          "path": "LICENSE",
+          "git_blob": "8082155fbca9b9b3dca9699b729e0f140acfa21d",
+          "mode": "100644",
+          "sha256": "612ba0d56d06a0056e9edef603f3c4c348b278c9843cbeab5a1cf8a729407309",
+          "bytes": 1634,
+          "mirror": "noai-flavor/LICENSE",
+          "mirror_sha256": "612ba0d56d06a0056e9edef603f3c4c348b278c9843cbeab5a1cf8a729407309",
+          "mirror_modified": false,
+          "role": "license",
+          "read_groups": []
+        },
+        {
+          "path": "README.md",
+          "git_blob": "ad71f2c1ea0fd72e4348e2f3f1df91b9916ef6c6",
+          "mode": "100644",
+          "sha256": "2017c0446cc262c20efc5149016d899d3e9b0bc53cae1bae26e240aeac7a0074",
+          "bytes": 11024,
+          "mirror": "noai-flavor/README.md",
+          "mirror_sha256": "2017c0446cc262c20efc5149016d899d3e9b0bc53cae1bae26e240aeac7a0074",
+          "mirror_modified": false,
+          "role": "documentation",
+          "read_groups": []
+        },
+        {
+          "path": "examples/before-after/conclusions.md",
+          "git_blob": "357cd3da46ab81b3f8f967990323eaa7cd0576e6",
+          "mode": "100644",
+          "sha256": "6c641e5096d5bae08acef2f0eb2e114f41e489530ef4bd9099877e1c65d0d616",
+          "bytes": 2089,
+          "mirror": "noai-flavor/examples/before-after/conclusions.md",
+          "mirror_sha256": "6c641e5096d5bae08acef2f0eb2e114f41e489530ef4bd9099877e1c65d0d616",
+          "mirror_modified": false,
+          "role": "example",
+          "read_groups": [
+            "text-examples"
+          ]
+        },
+        {
+          "path": "examples/before-after/frontend/case-studies.md",
+          "git_blob": "b1e34b7c873dd9b96aebfaf480bde4d720e540ac",
+          "mode": "100644",
+          "sha256": "81e64a5c0f845c83bef715383948815851f193af26c8451c0b979340934f5195",
+          "bytes": 6857,
+          "mirror": "noai-flavor/examples/before-after/frontend/case-studies.md",
+          "mirror_sha256": "81e64a5c0f845c83bef715383948815851f193af26c8451c0b979340934f5195",
+          "mirror_modified": false,
+          "role": "example",
+          "read_groups": [
+            "web-examples"
+          ]
+        },
+        {
+          "path": "examples/before-after/intro-paragraphs.md",
+          "git_blob": "8b4495a97b4870bbda70c508a4f444b5b2474b87",
+          "mode": "100644",
+          "sha256": "f4d165ec6602a57388d2007bbd4cd4c6a3d49e8eedb5a1991a967e0059b7308b",
+          "bytes": 2258,
+          "mirror": "noai-flavor/examples/before-after/intro-paragraphs.md",
+          "mirror_sha256": "f4d165ec6602a57388d2007bbd4cd4c6a3d49e8eedb5a1991a967e0059b7308b",
+          "mirror_modified": false,
+          "role": "example",
+          "read_groups": [
+            "text-examples"
+          ]
+        },
+        {
+          "path": "integration/api-usage.md",
+          "git_blob": "d75041df1380d8875fb5973f62c5d04aabbeedab",
+          "mode": "100644",
+          "sha256": "e222409b9dd3e9695ff09e6794804358eb3bb7a836a3f0e6f19a39429147e432",
+          "bytes": 2707,
+          "mirror": "noai-flavor/integration/api-usage.md",
+          "mirror_sha256": "e222409b9dd3e9695ff09e6794804358eb3bb7a836a3f0e6f19a39429147e432",
+          "mirror_modified": false,
+          "role": "documentation",
+          "read_groups": []
+        },
+        {
+          "path": "integration/chatgpt.md",
+          "git_blob": "1374295fd9a1d6adbcf8151b76bc50a12cce638b",
+          "mode": "100644",
+          "sha256": "30278334d15b8bd1666c965ab615e0508978af0a70144342b759fb01ec616942",
+          "bytes": 1224,
+          "mirror": "noai-flavor/integration/chatgpt.md",
+          "mirror_sha256": "30278334d15b8bd1666c965ab615e0508978af0a70144342b759fb01ec616942",
+          "mirror_modified": false,
+          "role": "documentation",
+          "read_groups": []
+        },
+        {
+          "path": "integration/claude-code.md",
+          "git_blob": "667617140a5c40f9ed27c5b0a73c627fdcabeac4",
+          "mode": "100644",
+          "sha256": "e7bbe4a9bcb141d3b543709f983b7c9a8478cfa1fda673f2ad8f2f8f2735beb0",
+          "bytes": 1189,
+          "mirror": "noai-flavor/integration/claude-code.md",
+          "mirror_sha256": "e7bbe4a9bcb141d3b543709f983b7c9a8478cfa1fda673f2ad8f2f8f2735beb0",
+          "mirror_modified": false,
+          "role": "documentation",
+          "read_groups": []
+        },
+        {
+          "path": "integration/cursor.md",
+          "git_blob": "6faf170958cdbe5bf8b92a545bde53fbd99059a9",
+          "mode": "100644",
+          "sha256": "e07d0f100529d3270f84fd57b35dffc53728b7d2a0841800efeff7db3b0cceb9",
+          "bytes": 1067,
+          "mirror": "noai-flavor/integration/cursor.md",
+          "mirror_sha256": "e07d0f100529d3270f84fd57b35dffc53728b7d2a0841800efeff7db3b0cceb9",
+          "mirror_modified": false,
+          "role": "documentation",
+          "read_groups": []
+        },
+        {
+          "path": "patterns/README.md",
+          "git_blob": "3a07facb90999ce52e05b740435c9bbd95dce692",
+          "mode": "100644",
+          "sha256": "f27801ccc5bfcc2ccb6f35fd5083637bea6045d83550562f126c7127cc73c680",
+          "bytes": 2944,
+          "mirror": "noai-flavor/patterns/README.md",
+          "mirror_sha256": "f27801ccc5bfcc2ccb6f35fd5083637bea6045d83550562f126c7127cc73c680",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/ai-vocabulary.md",
+          "git_blob": "6311bfa051988b423343c2758af8d7bc7d9d3b8f",
+          "mode": "100644",
+          "sha256": "a16b12b96069c46ba7979da27fbfb641d6e88bcdef996ed351b16207e7852ec6",
+          "bytes": 2623,
+          "mirror": "noai-flavor/patterns/ai-vocabulary.md",
+          "mirror_sha256": "a16b12b96069c46ba7979da27fbfb641d6e88bcdef996ed351b16207e7852ec6",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/chatbot-artifacts.md",
+          "git_blob": "16493293f83e49cb3c94feba89efb15f7b9d6bac",
+          "mode": "100644",
+          "sha256": "8871d9d4b3b5e1da9b4aa69db98fff866e3f2f203acc6bcd79bf18395e683304",
+          "bytes": 2221,
+          "mirror": "noai-flavor/patterns/chatbot-artifacts.md",
+          "mirror_sha256": "8871d9d4b3b5e1da9b4aa69db98fff866e3f2f203acc6bcd79bf18395e683304",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/cliche-phrases.md",
+          "git_blob": "16ca8d4afcab3985e108e4e2148fa46eddb77dab",
+          "mode": "100644",
+          "sha256": "447daa79fee263cf2a5b33480bdba58f482614f8c5db3cf685b0e23fe0e43147",
+          "bytes": 2161,
+          "mirror": "noai-flavor/patterns/cliche-phrases.md",
+          "mirror_sha256": "447daa79fee263cf2a5b33480bdba58f482614f8c5db3cf685b0e23fe0e43147",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/emoji-abuse.md",
+          "git_blob": "3bed53a457a6fc05ed185f251640f0afe64bdce3",
+          "mode": "100644",
+          "sha256": "036c027c63d8bb4ed63eec13d2a7433a3276100094a07bb2465d5f0f393d67fc",
+          "bytes": 1730,
+          "mirror": "noai-flavor/patterns/emoji-abuse.md",
+          "mirror_sha256": "036c027c63d8bb4ed63eec13d2a7433a3276100094a07bb2465d5f0f393d67fc",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/formatting-overuse.md",
+          "git_blob": "b730ede0a4347347937837fa23fad2d606d9e402",
+          "mode": "100644",
+          "sha256": "a7c5e5826bcd366b97e6bc9f76aa3dbbb37e15d459ad0c291cda128becd62d35",
+          "bytes": 2323,
+          "mirror": "noai-flavor/patterns/formatting-overuse.md",
+          "mirror_sha256": "a7c5e5826bcd366b97e6bc9f76aa3dbbb37e15d459ad0c291cda128becd62d35",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/frontend/7-methods.md",
+          "git_blob": "5ae7cfdc6770fc739e86335789387b9fbe56f146",
+          "mode": "100644",
+          "sha256": "121d245f6e3eb7a5546618fab15b1e21579637cf1836d8adc4211159d64d4bfe",
+          "bytes": 12465,
+          "mirror": "noai-flavor/patterns/frontend/7-methods.md",
+          "mirror_sha256": "121d245f6e3eb7a5546618fab15b1e21579637cf1836d8adc4211159d64d4bfe",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "web"
+          ]
+        },
+        {
+          "path": "patterns/frontend/README.md",
+          "git_blob": "aaaa9218468fc526946c954ad08dd7f0dd1fcac5",
+          "mode": "100644",
+          "sha256": "cb68786fa7c8c448659f2f09b27420c1e9b3e4a1f2bae986cc816556d4a932b2",
+          "bytes": 1840,
+          "mirror": "noai-flavor/patterns/frontend/README.md",
+          "mirror_sha256": "cb68786fa7c8c448659f2f09b27420c1e9b3e4a1f2bae986cc816556d4a932b2",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "web"
+          ]
+        },
+        {
+          "path": "patterns/frontend/color-schemes.md",
+          "git_blob": "bcf705cdb5f72063d9d9ed4d655b890d83d1c4a2",
+          "mode": "100644",
+          "sha256": "ac9595b951373a74afc58053af2b357db72851f5c8089c94e2ba35cd0f84cc61",
+          "bytes": 2795,
+          "mirror": "noai-flavor/patterns/frontend/color-schemes.md",
+          "mirror_sha256": "ac9595b951373a74afc58053af2b357db72851f5c8089c94e2ba35cd0f84cc61",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "web"
+          ]
+        },
+        {
+          "path": "patterns/frontend/component-libraries.md",
+          "git_blob": "cd549c28dcea74c8b0d28b35ead9ede05c0d407b",
+          "mode": "100644",
+          "sha256": "51e935f64e05b6ff8d6958b7dc3adbe6b46105a61e1959a32cb39ec523b37f3d",
+          "bytes": 5036,
+          "mirror": "noai-flavor/patterns/frontend/component-libraries.md",
+          "mirror_sha256": "51e935f64e05b6ff8d6958b7dc3adbe6b46105a61e1959a32cb39ec523b37f3d",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "web"
+          ]
+        },
+        {
+          "path": "patterns/frontend/empty-content.md",
+          "git_blob": "e2f03797a56fcbef53f1a9e779e882d11e8e3040",
+          "mode": "100644",
+          "sha256": "28a84747f9a95d78c728892a83657e63db48e0d192602f8025d7564f89f19e04",
+          "bytes": 5064,
+          "mirror": "noai-flavor/patterns/frontend/empty-content.md",
+          "mirror_sha256": "28a84747f9a95d78c728892a83657e63db48e0d192602f8025d7564f89f19e04",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "web"
+          ]
+        },
+        {
+          "path": "patterns/frontend/layout-patterns.md",
+          "git_blob": "dc30e4eb652dc7161df91d40efc8a5f7f0969137",
+          "mode": "100644",
+          "sha256": "2730dfcde3c9f65a5de645050f82694caf8423546aa13e78a83599889303b691",
+          "bytes": 3573,
+          "mirror": "noai-flavor/patterns/frontend/layout-patterns.md",
+          "mirror_sha256": "2730dfcde3c9f65a5de645050f82694caf8423546aa13e78a83599889303b691",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "web"
+          ]
+        },
+        {
+          "path": "patterns/frontend/typography.md",
+          "git_blob": "4db0db171f3078a1c3462d8f45d789eb8a69400f",
+          "mode": "100644",
+          "sha256": "d75980e262ed821937078adc5c81e0a897a840bd66d207cf654d3eacf40f9c2f",
+          "bytes": 3543,
+          "mirror": "noai-flavor/patterns/frontend/typography.md",
+          "mirror_sha256": "d75980e262ed821937078adc5c81e0a897a840bd66d207cf654d3eacf40f9c2f",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "web"
+          ]
+        },
+        {
+          "path": "patterns/generic-conclusions.md",
+          "git_blob": "2c29041e8e9527dd3ad82af5d1b3555082fb5ce6",
+          "mode": "100644",
+          "sha256": "e8d67f2dcc375a8c40ac12888d4f91963cf94aed2d8707638a957598a4133bc3",
+          "bytes": 2265,
+          "mirror": "noai-flavor/patterns/generic-conclusions.md",
+          "mirror_sha256": "e8d67f2dcc375a8c40ac12888d4f91963cf94aed2d8707638a957598a4133bc3",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/grammar-tricks.md",
+          "git_blob": "542c31b896a75d6ddc3de441e7779cfcf77334a3",
+          "mode": "100644",
+          "sha256": "b8bf82149562a708d9872e54d0945e9d6f95decdcd9d97c0e3edf4b6cc7c4366",
+          "bytes": 2987,
+          "mirror": "noai-flavor/patterns/grammar-tricks.md",
+          "mirror_sha256": "b8bf82149562a708d9872e54d0945e9d6f95decdcd9d97c0e3edf4b6cc7c4366",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/list-obsession.md",
+          "git_blob": "f23ae25fa78a2ef80e2b2ee147688d681bbbbaf9",
+          "mode": "100644",
+          "sha256": "7e8d5aaa76a2729b18f64daa894e33b428cfea37c6acf97298155c80f542a276",
+          "bytes": 3187,
+          "mirror": "noai-flavor/patterns/list-obsession.md",
+          "mirror_sha256": "7e8d5aaa76a2729b18f64daa894e33b428cfea37c6acf97298155c80f542a276",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/over-hedging.md",
+          "git_blob": "d3a4035837b3599b94f202959ff45bf632f1179f",
+          "mode": "100644",
+          "sha256": "d3be10000bfef23545dad1f3e130060d1972b48d31b437503ab658590da771d2",
+          "bytes": 1949,
+          "mirror": "noai-flavor/patterns/over-hedging.md",
+          "mirror_sha256": "d3be10000bfef23545dad1f3e130060d1972b48d31b437503ab658590da771d2",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/promotional-language.md",
+          "git_blob": "98034847234f1833270655a468bc55ee7bb487e6",
+          "mode": "100644",
+          "sha256": "e7c5be3e04c63f96a204f89cd529f6d3ccb6387a7ea47cb16b3fb7f3363ea98e",
+          "bytes": 2002,
+          "mirror": "noai-flavor/patterns/promotional-language.md",
+          "mirror_sha256": "e7c5be3e04c63f96a204f89cd529f6d3ccb6387a7ea47cb16b3fb7f3363ea98e",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/significance-inflation.md",
+          "git_blob": "a27a45d92475abc8087d16e10c456ec69e9bbf7b",
+          "mode": "100644",
+          "sha256": "0628832aa29569cb92ba179251398dafad2d488e01a07adad9649673524b3fda",
+          "bytes": 2169,
+          "mirror": "noai-flavor/patterns/significance-inflation.md",
+          "mirror_sha256": "0628832aa29569cb92ba179251398dafad2d488e01a07adad9649673524b3fda",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/superficial-analysis.md",
+          "git_blob": "ec8c1717a721a15e56ac96aacb08c5753648de51",
+          "mode": "100644",
+          "sha256": "c911813ac52a020703274de8fd7c59e9805fde87ce5e5c0d2e60f60306a66e05",
+          "bytes": 1845,
+          "mirror": "noai-flavor/patterns/superficial-analysis.md",
+          "mirror_sha256": "c911813ac52a020703274de8fd7c59e9805fde87ce5e5c0d2e60f60306a66e05",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/sycophantic-tone.md",
+          "git_blob": "aff8de47544d5708fdc7af29c415452949e683d8",
+          "mode": "100644",
+          "sha256": "4ca3ddac7348530d42a0ee4ec8bbf2bb53343ecb3824abe8f03ee794365f7946",
+          "bytes": 1924,
+          "mirror": "noai-flavor/patterns/sycophantic-tone.md",
+          "mirror_sha256": "4ca3ddac7348530d42a0ee4ec8bbf2bb53343ecb3824abe8f03ee794365f7946",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/template-structures.md",
+          "git_blob": "07a7f2cc49204a3c3bf6f61806388bc12278ec15",
+          "mode": "100644",
+          "sha256": "f05609700786d4e9feb6e172895a367d91182a14bf5c4a0bec17cfdc8a1c5718",
+          "bytes": 3863,
+          "mirror": "noai-flavor/patterns/template-structures.md",
+          "mirror_sha256": "f05609700786d4e9feb6e172895a367d91182a14bf5c4a0bec17cfdc8a1c5718",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/transition-patterns.md",
+          "git_blob": "07e4801ebfd2c594a6bb48c171cd0bdb7caf6131",
+          "mode": "100644",
+          "sha256": "4f3bf7d8dd21b612d1aaa5904181a03ce3932909f5ca834867d4760122a0b2e4",
+          "bytes": 2793,
+          "mirror": "noai-flavor/patterns/transition-patterns.md",
+          "mirror_sha256": "4f3bf7d8dd21b612d1aaa5904181a03ce3932909f5ca834867d4760122a0b2e4",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "patterns/vague-attribution.md",
+          "git_blob": "49e8be96ea7dc7d328faa2b90bcb5c336235cfca",
+          "mode": "100644",
+          "sha256": "38c76dc352c4d731bfd7ec3d13daaad4255af7610f839813ccf45c14a1b606b2",
+          "bytes": 1942,
+          "mirror": "noai-flavor/patterns/vague-attribution.md",
+          "mirror_sha256": "38c76dc352c4d731bfd7ec3d13daaad4255af7610f839813ccf45c14a1b606b2",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "prompts/base/anti-ai-core.md",
+          "git_blob": "68fd6d4f5b8eb77e31e8a72276ec098a53baaac2",
+          "mode": "100644",
+          "sha256": "44d7de17d5b123895b736bd28286d6a5e2b8508d794352402073e2aa9c3f5333",
+          "bytes": 3375,
+          "mirror": "noai-flavor/prompts/base/anti-ai-core.md",
+          "mirror_sha256": "44d7de17d5b123895b736bd28286d6a5e2b8508d794352402073e2aa9c3f5333",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "prompts/base/style-injection.md",
+          "git_blob": "48966358c9d2fba04a587d0c8db001e39e9ee305",
+          "mode": "100644",
+          "sha256": "7bb26f3dd8cd8b6c767c6c9e8e2e05976741e298e2d21308a964d2cf2268cd5a",
+          "bytes": 3936,
+          "mirror": "noai-flavor/prompts/base/style-injection.md",
+          "mirror_sha256": "7bb26f3dd8cd8b6c767c6c9e8e2e05976741e298e2d21308a964d2cf2268cd5a",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "prompts/frontend/anti-ai-web.md",
+          "git_blob": "a0316b1b4ea4006c238b33b5f96061000930c99c",
+          "mode": "100644",
+          "sha256": "0e001d8bd98a58fe273a37ec2325650a85208275c7e099c310ca043af5182af7",
+          "bytes": 8628,
+          "mirror": "noai-flavor/prompts/frontend/anti-ai-web.md",
+          "mirror_sha256": "0e001d8bd98a58fe273a37ec2325650a85208275c7e099c310ca043af5182af7",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "web"
+          ]
+        },
+        {
+          "path": "prompts/platforms/wechat.md",
+          "git_blob": "6042c469d73caaaf444a12d11828b3e8ea4054d0",
+          "mode": "100644",
+          "sha256": "3fb04174ca426f6812d5ae6b52faacf4e3890a8329d77f671591541397196bcf",
+          "bytes": 2155,
+          "mirror": "noai-flavor/prompts/platforms/wechat.md",
+          "mirror_sha256": "3fb04174ca426f6812d5ae6b52faacf4e3890a8329d77f671591541397196bcf",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "wechat"
+          ]
+        },
+        {
+          "path": "prompts/platforms/xiaohongshu.md",
+          "git_blob": "e9b83ab2b6a908b83df50a7ef65b5a5e7a094a1f",
+          "mode": "100644",
+          "sha256": "d99b8353f9e112dd1bc77209a0fbe0f2adb21a70121d06107650e825b2428ff2",
+          "bytes": 2558,
+          "mirror": "noai-flavor/prompts/platforms/xiaohongshu.md",
+          "mirror_sha256": "d99b8353f9e112dd1bc77209a0fbe0f2adb21a70121d06107650e825b2428ff2",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "xiaohongshu"
+          ]
+        },
+        {
+          "path": "prompts/platforms/zhihu.md",
+          "git_blob": "f8bf74cf7eb49c097ca43d945873abef90f3620f",
+          "mode": "100644",
+          "sha256": "e5bcf4a1b4699e39ca614753c8d7abca120e9285ac5a21f3a7abbb2e2b9eefa7",
+          "bytes": 2076,
+          "mirror": "noai-flavor/prompts/platforms/zhihu.md",
+          "mirror_sha256": "e5bcf4a1b4699e39ca614753c8d7abca120e9285ac5a21f3a7abbb2e2b9eefa7",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "zhihu"
+          ]
+        },
+        {
+          "path": "resources/color-tools.md",
+          "git_blob": "9138cb30f25a4a5a443c73fed63f6992bc695d71",
+          "mode": "100644",
+          "sha256": "1911c39d242459ece51fcb64f62523f04893149a2ae365620e05fb2cc78f16b4",
+          "bytes": 6302,
+          "mirror": "noai-flavor/resources/color-tools.md",
+          "mirror_sha256": "1911c39d242459ece51fcb64f62523f04893149a2ae365620e05fb2cc78f16b4",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "web"
+          ]
+        },
+        {
+          "path": "resources/design-tools.md",
+          "git_blob": "a2d675dd230a97bc1ac8414e95187f5fe48b5f9d",
+          "mode": "100644",
+          "sha256": "f1a145a976a8d7bdc2d20acd5cfabd5b9fce8721e48862ea8d1908c44ccda70e",
+          "bytes": 6488,
+          "mirror": "noai-flavor/resources/design-tools.md",
+          "mirror_sha256": "f1a145a976a8d7bdc2d20acd5cfabd5b9fce8721e48862ea8d1908c44ccda70e",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "web"
+          ]
+        },
+        {
+          "path": "resources/image-resources.md",
+          "git_blob": "33d26b26d3fd47eab53a4dacdae9162ab0a51712",
+          "mode": "100644",
+          "sha256": "315fedf923835e87e3e993a50b37af4b9da1cb9289c9e9b0708dabec0696b922",
+          "bytes": 5920,
+          "mirror": "noai-flavor/resources/image-resources.md",
+          "mirror_sha256": "315fedf923835e87e3e993a50b37af4b9da1cb9289c9e9b0708dabec0696b922",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "web"
+          ]
+        },
+        {
+          "path": "resources/quality-scoring.md",
+          "git_blob": "afa403c269222069bd45063138d2ba3a95e9d3ec",
+          "mode": "100644",
+          "sha256": "2ffbb55988767c2963dda38e4abed039c19308977058c2c0b43d60541c20c7ca",
+          "bytes": 2387,
+          "mirror": "noai-flavor/resources/quality-scoring.md",
+          "mirror_sha256": "2ffbb55988767c2963dda38e4abed039c19308977058c2c0b43d60541c20c7ca",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "common-text"
+          ]
+        },
+        {
+          "path": "resources/ui-libraries.md",
+          "git_blob": "075d4f4b5686eb88ec4b4eb35884e367a6db8db6",
+          "mode": "100644",
+          "sha256": "668109ec212c186c8c4f5a4ef814a3bc59352495299c0f46d52b50aa2bfc6d56",
+          "bytes": 5361,
+          "mirror": "noai-flavor/resources/ui-libraries.md",
+          "mirror_sha256": "668109ec212c186c8c4f5a4ef814a3bc59352495299c0f46d52b50aa2bfc6d56",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "web"
+          ]
+        },
+        {
+          "path": "skills/README.md",
+          "git_blob": "a61e22ec00987295043e3b3f3f078f755c86fa22",
+          "mode": "100644",
+          "sha256": "5342fdd9d0294d965b3f54e06ee3e8a6371d8df7d7f9d6eec59a359e75a62abe",
+          "bytes": 5294,
+          "mirror": "noai-flavor/skills/README.md",
+          "mirror_sha256": "5342fdd9d0294d965b3f54e06ee3e8a6371d8df7d7f9d6eec59a359e75a62abe",
+          "mirror_modified": false,
+          "role": "documentation",
+          "read_groups": []
+        },
+        {
+          "path": "skills/noai-flavor.md",
+          "git_blob": "1387204d038e1239096119d0a96eebef3407e121",
+          "mode": "100644",
+          "sha256": "8a723ac0ecc1333a788066e0fcc426890d778448e4feed518db3df31c11e211b",
+          "bytes": 10902,
+          "mirror": "noai-flavor/skills/noai-flavor.md",
+          "mirror_sha256": "8a723ac0ecc1333a788066e0fcc426890d778448e4feed518db3df31c11e211b",
+          "mirror_modified": false,
+          "role": "rule",
+          "read_groups": [
+            "writing",
+            "web"
+          ]
+        }
+      ]
+    }
+  ],
+  "reading_groups": {
+    "anti-en": [
+      "anti-defensive-writing-Skill/prompts/quick-prompt-en.txt",
+      "anti-defensive-writing-Skill/skills/anti-defensive-writing-en/SKILL.source.md"
+    ],
+    "anti-zh": [
+      "anti-defensive-writing-Skill/prompts/精简版提示词.txt",
+      "anti-defensive-writing-Skill/skills/anti-defensive-writing/SKILL.source.md"
+    ],
+    "academic": [
+      "academic-humanizer/SKILL.source.md"
+    ],
+    "proposal": [
+      "academic-humanizer/SKILL.source.md"
+    ],
+    "academic-examples": [
+      "academic-humanizer/examples/before-after.md"
+    ],
+    "proposal-examples": [
+      "academic-humanizer/examples/before-after.md"
+    ],
+    "text-examples": [
+      "noai-flavor/examples/before-after/conclusions.md",
+      "noai-flavor/examples/before-after/intro-paragraphs.md"
+    ],
+    "web-examples": [
+      "noai-flavor/examples/before-after/frontend/case-studies.md"
+    ],
+    "common-text": [
+      "noai-flavor/patterns/README.md",
+      "noai-flavor/patterns/ai-vocabulary.md",
+      "noai-flavor/patterns/chatbot-artifacts.md",
+      "noai-flavor/patterns/cliche-phrases.md",
+      "noai-flavor/patterns/emoji-abuse.md",
+      "noai-flavor/patterns/formatting-overuse.md",
+      "noai-flavor/patterns/generic-conclusions.md",
+      "noai-flavor/patterns/grammar-tricks.md",
+      "noai-flavor/patterns/list-obsession.md",
+      "noai-flavor/patterns/over-hedging.md",
+      "noai-flavor/patterns/promotional-language.md",
+      "noai-flavor/patterns/significance-inflation.md",
+      "noai-flavor/patterns/superficial-analysis.md",
+      "noai-flavor/patterns/sycophantic-tone.md",
+      "noai-flavor/patterns/template-structures.md",
+      "noai-flavor/patterns/transition-patterns.md",
+      "noai-flavor/patterns/vague-attribution.md",
+      "noai-flavor/prompts/base/anti-ai-core.md",
+      "noai-flavor/prompts/base/style-injection.md",
+      "noai-flavor/resources/quality-scoring.md"
+    ],
+    "web": [
+      "noai-flavor/patterns/frontend/7-methods.md",
+      "noai-flavor/patterns/frontend/README.md",
+      "noai-flavor/patterns/frontend/color-schemes.md",
+      "noai-flavor/patterns/frontend/component-libraries.md",
+      "noai-flavor/patterns/frontend/empty-content.md",
+      "noai-flavor/patterns/frontend/layout-patterns.md",
+      "noai-flavor/patterns/frontend/typography.md",
+      "noai-flavor/prompts/frontend/anti-ai-web.md",
+      "noai-flavor/resources/color-tools.md",
+      "noai-flavor/resources/design-tools.md",
+      "noai-flavor/resources/image-resources.md",
+      "noai-flavor/resources/ui-libraries.md",
+      "noai-flavor/skills/noai-flavor.md"
+    ],
+    "wechat": [
+      "noai-flavor/prompts/platforms/wechat.md"
+    ],
+    "xiaohongshu": [
+      "noai-flavor/prompts/platforms/xiaohongshu.md"
+    ],
+    "zhihu": [
+      "noai-flavor/prompts/platforms/zhihu.md"
+    ],
+    "writing": [
+      "noai-flavor/skills/noai-flavor.md"
+    ]
+  },
+  "coverage": {
+    "source_count": 3,
+    "original_files": 72,
+    "rule_files": 41,
+    "archive_count": 3
+  }
+}

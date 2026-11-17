@@ -11,11 +11,14 @@ import sys
 from pathlib import Path
 from urllib.parse import unquote
 
+from source_bundle import verify_bundle
+
 NAME = "fanai-skills"
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "skills" / NAME
 SKIP = {".git", "__pycache__", ".pytest_cache", ".venv", "node_modules", "dist"}
-REFERENCES = {"academic", "proposal", "writing", "web", "patterns", "examples"}
+REFERENCES = {"academic", "proposal", "writing", "web", "patterns", "examples",
+              "reading-map", "acceptance-checklist", "conflicts"}
 LICENSES = {
     "MIT.txt", "CC-BY-4.0.txt", "anti-defensive-writing-Skill.txt",
     "academic-humanizer.txt", "noai-flavor.txt", "humanizer.txt",
@@ -60,7 +63,8 @@ def validate_skill(skill: Path) -> list[str]:
         errors.append("Entry is too long; move details into references")
     if "../ccf-" in text or "ccf_skill_controls" in text:
         errors.append("Standalone skill must not require installed CCFA siblings")
-    required = [skill / "NOTICE.md", skill / "agents" / "openai.yaml"]
+    required = [skill / "NOTICE.md", skill / "agents" / "openai.yaml",
+                skill / "scripts" / "check_invariants.py"]
     required += [skill / "references" / f"{ref}.md" for ref in REFERENCES]
     required += [skill / "licenses" / item for item in LICENSES]
     for path in required:
@@ -75,7 +79,8 @@ def validate_skill(skill: Path) -> list[str]:
     if any(path.is_symlink() for path in links):
         errors.append("Skill package must contain no symbolic links")
     if len(list(skill.rglob("SKILL.md"))) != 1:
-        errors.append("Package must contain exactly one SKILL.md")
+        errors.append("Package must contain exactly one executable SKILL.md")
+    errors.extend(verify_bundle(skill))
     return errors
 
 
@@ -97,6 +102,9 @@ def validate_tree(root: Path) -> list[str]:
             errors.append(f"{rel}: BOM, replacement character, or NUL detected")
         if home_windows.search(text) or home_unix.search(text) or drive_path.search(text):
             errors.append(f"{rel}: machine-specific absolute path detected")
+        # Preserve upstream source data; its full checksums are checked separately.
+        if "upstream" in path.relative_to(root).parts:
+            continue
         if path.suffix == ".py":
             try:
                 ast.parse(text, filename=rel)
@@ -121,9 +129,9 @@ def validate_tree(root: Path) -> list[str]:
 
 def validate_repository(root: Path) -> list[str]:
     errors = validate_skill(root / "skills" / NAME) + validate_tree(root)
-    for name in ("README.md", "LICENSE", ".gitignore", "scripts/install.py",
-                 "scripts/build_release.py", "tests/test_package.py",
-                 ".github/workflows/validate.yml"):
+    for name in ("README.md", "AGENTS.md", "LICENSE", ".gitignore", ".gitattributes", "scripts/install.py",
+                 "scripts/build_release.py", "scripts/source_bundle.py", "scripts/sync_sources.py",
+                 "tests/test_package.py", "tests/test_invariants.py", ".github/workflows/validate.yml"):
         if not (root / name).is_file():
             errors.append(f"Missing repository file: {name}")
     return errors

@@ -22,7 +22,7 @@ def release_files(root: Path) -> list[Path]:
         if path.is_symlink():
             raise ValueError(f"Do not release symlinks: {rel}")
         if path.is_file():
-            if rel.parts[0] not in {"skills", "scripts", "tests", ".github", "README.md", "LICENSE", ".gitignore"}:
+            if rel.parts[0] not in {"skills", "scripts", "tests", ".github", "README.md", "AGENTS.md", "LICENSE", ".gitignore", ".gitattributes"}:
                 raise ValueError(f"Unexpected release file; inspect it: {rel}")
             files.append(path)
     return files

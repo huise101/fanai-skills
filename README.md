@@ -1,6 +1,6 @@
 # 反aiskills
 
-**一个技能，处理反防御性写作、学术人性化和通用去 AI 味。**
+**完整集合版 v2.0.0：一个技能入口，收齐三个来源的全部资料，并执行必读与逐项验收。**
 
 面向中文和英文：论文、摘要、引言、结论、rebuttal、基金申请、普通文章、平台文案，以及网页去模板化。改的是表达、叙事和视觉模板，不是事实。
 
@@ -14,7 +14,18 @@
 | [AIScientists-Dev/academic-humanizer](https://github.com/AIScientists-Dev/academic-humanizer) | 学术清晰度、主张与证据、作者风格、基金申请模式 |
 | [yiancode/noai-flavor](https://github.com/yiancode/noai-flavor) | 中英文模板表达、平台语气、网页去模板化 |
 
-这是**去重、重写并解决规则冲突的独立整合版**，不是三个技能依次执行。来源版本、许可证和改编说明见 [NOTICE](skills/fanai-skills/NOTICE.md)。
+这是**完整来源库＋统一执行规则**，不是只保留核心摘要，也不是把三个互相冲突的技能无条件叠加。
+
+| 完整原版资料 | Git跟踪文件数 | 可浏览镜像 |
+| --- | ---: | --- |
+| anti-defensive-writing-Skill | 14 | [全部文件](skills/fanai-skills/upstream/anti-defensive-writing-Skill/) |
+| academic-humanizer | 10 | [全部文件](skills/fanai-skills/upstream/academic-humanizer/) |
+| noai-flavor | 48 | [全部文件](skills/fanai-skills/upstream/noai-flavor/) |
+| **合计** | **72** | **41份规则文件全部进入适用阅读组** |
+
+包括中英文SKILL、提示词、全部patterns、平台/前端规则、案例、资源推荐、集成文档、图像、源码和许可证。另提供 [三个原始ZIP](skills/fanai-skills/upstream/archives/) 保留原始路径与全部字节；[逐文件清单](skills/fanai-skills/upstream/manifest.json) 记录commit、Git blob和SHA256。可浏览镜像仅将原版 `SKILL.md` 改名以避免多技能激活，并调整相关本地链接；原始ZIP不做这些变更。
+
+范围是最初给出的三个不同仓库（重复链接只计一次），不递归搬运其提及的所有第三方网站、工具或ARMS研究流水线。来源、版权和改编说明见 [NOTICE](skills/fanai-skills/NOTICE.md)。
 
 ## 名称与兼容性
 
@@ -22,6 +33,18 @@
 - 技能标识及目录名：`fanai-skills`。Agent Skills 使用小写英文、数字和连字符；中文名称保留在标题、描述和UI元数据中。
 - 核心技能是普通Markdown文件，不依赖Python、MCP、外部模型API或联网。可由支持 `SKILL.md` 的工具读取；实际自动发现和命令语法以各工具为准。
 - 提供的安装、校验和测试脚本需要 Python 3.10+，仅使用标准库，无需 `pip install`。
+
+## 每次使用的执行契约
+
+让AI使用本仓库链接时，不能只读README后凭印象润色，必须：
+
+1. 读取 [SKILL.md](skills/fanai-skills/SKILL.md)，确认当前版本和授权范围。
+2. 读取 [完整阅读地图](skills/fanai-skills/references/reading-map.md)、[验收清单](skills/fanai-skills/references/acceptance-checklist.md) 和 [冲突处理表](skills/fanai-skills/references/conflicts.md)。
+3. 读完当前文体所有适用来源组，不用普通文章口语规则覆盖学术准确性，不把原版示例当用户事实。
+4. 修改后逐项检查事实、数字、公式、引用、范围、必要局限和全部适用反模式，再读成稿做第二遍检查。
+5. 有原稿/修订稿文件和Python时运行不变量检查；否则人工对照。未读完或未核验的范围必须说明，不能把局部检查写成“全稿通过”。
+
+同会话已完整读过且版本未变的内容可复用。安装后只有一个 `fanai-skills` 入口，原版资料不会自动激活成多套冲突的技能。技能把必读和检查流程固定下来，但静态脚本或模型自检都不是“以后永不出错”或“检测器必过”的保证。
 
 ## 安装
 
@@ -128,16 +151,23 @@ python scripts/install.py --replace
 
 ```text
 skills/fanai-skills/
-  SKILL.md                  统一入口与任务边界
+  SKILL.md                  唯一执行入口与任务边界
   agents/openai.yaml        反aiskills显示名称
-  references/               分文体规则、模式表和示例
+  references/               阅读地图、逐项验收、冲突表、分文体规则
+  scripts/check_invariants.py 数值/引用/公式的离线对照
+  upstream/
+    manifest.json           72个原文件的覆盖与校验记录
+    archives/               三个原始字节ZIP
+    <三个项目目录>/         完整可浏览镜像
   NOTICE.md                 来源、版本、署名与改编说明
   licenses/                 完整许可与上游声明
 scripts/
   install.py                安全安装/显式更新
-  validate.py               静态结构与发布检查
-  build_release.py          生成不含.git和缓存的ZIP
-tests/                      安装与校验的自动化测试
+  validate.py               结构、完整原版资料与发布检查
+  source_bundle.py          ZIP/镜像/阅读覆盖一致性校验
+  sync_sources.py           从固定版本本地Git副本重新生成来源库
+  build_release.py          生成不含.git和缓存的发布ZIP
+tests/                      安装、覆盖与不变量的自动化测试
 .github/workflows/          Linux/Windows静态CI
 ```
 
@@ -149,7 +179,17 @@ python -B -m unittest discover -s tests -v
 python scripts/build_release.py
 ```
 
-打包输出为 `dist/fanai-skills-github.zip`，包含源码、安装与校验脚本、文档和许可证。校验检查结构、链接、许可证、编码和明显的本机路径泄漏，**不等于对模型改写效果或AI检测率的测量**。
+打包输出为 `dist/fanai-skills-github.zip`，包含整合技能、完整原版资料、脚本、文档和许可证。校验同时检查72个原文件、三个ZIP、镜像校验和与规则阅读组覆盖，**不等于对模型改写效果或AI检测率的测量**。
+
+对照UTF-8纯文本/Markdown/LaTeX原稿和修订稿：
+
+```sh
+python skills/fanai-skills/scripts/check_invariants.py original.tex revised.tex
+```
+
+脚本不改文件、不联网；发现数值、已识别的LaTeX引用/交叉引用或公式变化时返回非零状态供人工核对。它不能检查全部单位、科学含义、必要披露、PDF/Word对象或“变化是否获准”，不可把脚本通过当作完整学术核验。
+
+来源固定在NOTICE所列commit。需要重建完整来源库时，准备三个包含这些commit的本地Git副本，按 `python scripts/sync_sources.py --help` 指定每个副本；该脚本不联网、不运行上游源码，也不会悄悄更新为未经审阅的新版本。
 
 公开仓库：[huise101/fanai-skills](https://github.com/huise101/fanai-skills)，页面标题为“反aiskills”。再次分发时使用本目录内容，或解压上述ZIP后上传；不要上传 `dist/`、缓存或私人稿件。仓库已包含 `.gitignore` 和自动化校验；安装与打包脚本不会自动创建远程仓库或上传文件。
 
@@ -158,4 +198,4 @@ python scripts/build_release.py
 - 技能文字、参考文档和说明：**CC BY 4.0**。
 - 本版Python脚本及测试：**MIT**。
 - 上游MIT授权继续保留；再分发需保留原始署名与许可。详见 [LICENSE](LICENSE) 和 [NOTICE](skills/fanai-skills/NOTICE.md)，不能把整包标成纯MIT而省略文字许可。
-- 本技能不含联网/遥测代码。宿主AI工具如何处理输入取决于其配置和服务条款；“技能无遥测”不表示模型推理一定离线。
+- 整合版安装、校验和对照脚本不联网、不遥测。完整原版资料中的API/集成/下载示例只作参考保存，不自动执行。宿主AI工具如何处理输入取决于其配置和服务条款；这不表示模型推理一定离线。

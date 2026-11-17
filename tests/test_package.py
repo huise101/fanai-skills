@@ -2,6 +2,7 @@
 """Deterministic packaging/installation tests, not model-behavior tests."""
 from __future__ import annotations
 
+import json
 import os
 import shutil
 import sys
@@ -17,6 +18,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import build_release
 import install
 import validate
+import source_bundle
 
 
 class StructureTests(unittest.TestCase):
@@ -51,6 +53,46 @@ class StructureTests(unittest.TestCase):
             self.assertEqual(install.default_target("codex"), Path("codex-test/skills/fanai-skills"))
             self.assertEqual(install.default_target("pi"), Path("pi-test/skills/fanai-skills"))
             self.assertEqual(install.default_target("agents"), Path.home() / ".agents/skills/fanai-skills")
+
+
+class CompleteSourceTests(unittest.TestCase):
+    def test_exact_pinned_source_coverage(self):
+        self.assertEqual(source_bundle.verify_bundle(validate.SKILL), [])
+        manifest = json.loads((validate.SKILL / "upstream" / "manifest.json").read_text(encoding="utf-8"))
+        self.assertEqual(manifest["coverage"]["original_files"], 72)
+        self.assertEqual(manifest["coverage"]["rule_files"], 41)
+        self.assertEqual({x["name"]: len(x["files"]) for x in manifest["sources"]},
+                         {"anti-defensive-writing-Skill": 14, "academic-humanizer": 10, "noai-flavor": 48})
+
+    def test_original_entries_cannot_activate_extra_skills(self):
+        self.assertEqual(len(list(validate.SKILL.rglob("SKILL.md"))), 1)
+        self.assertEqual(len(list(validate.SKILL.rglob("SKILL.source.md"))), 3)
+
+    def test_changed_mirror_is_detected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            copy = Path(directory) / validate.NAME
+            shutil.copytree(validate.SKILL, copy)
+            path = copy / "upstream" / "noai-flavor" / "patterns" / "over-hedging.md"
+            path.write_bytes(path.read_bytes() + b"changed")
+            self.assertTrue(any("mirror missing/changed" in e for e in source_bundle.verify_bundle(copy)))
+
+    def test_missing_original_archive_is_detected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            copy = Path(directory) / validate.NAME
+            shutil.copytree(validate.SKILL, copy)
+            (copy / "upstream" / "archives" / "academic-humanizer.zip").unlink()
+            self.assertTrue(any("missing original snapshot" in e for e in source_bundle.verify_bundle(copy)))
+
+    def test_rule_without_reading_group_is_detected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            copy = Path(directory) / validate.NAME
+            shutil.copytree(validate.SKILL, copy)
+            path = copy / "upstream" / "manifest.json"
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            rule = next(f for s in manifest["sources"] for f in s["files"] if f["role"] == "rule")
+            rule["read_groups"] = []
+            path.write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
+            self.assertTrue(any("rule missing" in e for e in source_bundle.verify_bundle(copy)))
 
 
 class InstallationTests(unittest.TestCase):

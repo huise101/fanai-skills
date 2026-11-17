@@ -1,0 +1,8 @@
+# Keep active instructions/scripts consistent on Windows and Linux.
+*.md text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+
+# Pinned mirrors and ZIP archives are byte-verified against the source manifest.
+skills/fanai-skills/upstream/** -text
