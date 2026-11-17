@@ -57,7 +57,8 @@ class InstallationTests(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory(prefix="fanai-tests-")
         self.addCleanup(self.temporary.cleanup)
-        self.root = Path(self.temporary.name)
+        # Windows TEMP may use an 8.3 alias; match the installer's resolved paths.
+        self.root = Path(self.temporary.name).resolve()
         self.source = self.root / "source" / validate.NAME
         self.target = self.root / "tool" / "skills" / validate.NAME
         shutil.copytree(validate.SKILL, self.source)
