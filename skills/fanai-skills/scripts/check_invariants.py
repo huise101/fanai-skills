@@ -41,7 +41,7 @@ def compare(before: str, after: str) -> dict:
             changes[category] = {"removed": dict(removed), "added": dict(added)}
     return {"status": "differences_need_review" if changes else "no_detected_invariant_changes",
             "changes": changes,
-            "limits": "Checks numeric literals and recognized LaTeX citations/references/math only. Does not verify units, prose meaning, evidence, disclosure, Word/PDF objects, or authorized-change intent."}
+            "limits": "Checks numeric literals and recognized LaTeX citations/references/math only. Does not verify units, quantity qualifiers, uncertainty, prose meaning, evidence, disclosure, Word/PDF objects, or authorized-change intent."}
 
 
 def main() -> int:

@@ -73,6 +73,14 @@ class InvariantTests(unittest.TestCase):
             parsed = json.loads(result.stdout.decode("utf-8"))
             self.assertIn("numbers", parsed["changes"])
 
+    def test_same_number_does_not_certify_quantity_or_uncertainty(self):
+        result = check_invariants.compare("展区超过300平方米，设备可能受影响。",
+                                          "展区300平方米，设备会受影响。")
+        self.assertEqual(result["changes"], {})
+        self.assertIn("quantity qualifiers", result["limits"])
+        self.assertIn("uncertainty", result["limits"])
+        self.assertNotIn("passed", result["status"])
+
     def test_explicitly_reports_semantic_limits(self):
         result = check_invariants.compare("may help; not evaluated", "proves superiority")
         self.assertEqual(result["changes"], {})

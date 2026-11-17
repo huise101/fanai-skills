@@ -4,7 +4,7 @@
 
 核验日期：2026-11-17。以下commit固定了本版来源，而不是对上游未来版本的描述。
 
-v2.0.1完整集合保留三个来源全部72个Git跟踪文件：14＋10＋48。所有规则、提示词、示例、资源/集成文档、资产、源码和许可证均收录；41份规则文件全部纳入适用阅读组。逐文件记录见 [upstream/manifest.json](upstream/manifest.json)，原始字节ZIP见 [upstream/archives](upstream/archives/)。浏览镜像将原SKILL.md改名为SKILL.source.md并调整相关Markdown链接，避免额外激活旧技能；另修复noai-flavor中5个继承的坏相对链接，所有变换均逐项列在manifest的mirror_transformations中。ZIP中的原始路径与字节不变。此完整性结论只针对上述固定版本的Git跟踪文件，不包括Git历史、未跟踪文件或链接到的所有第三方项目。
+v2.0.2完整集合保留三个来源全部72个Git跟踪文件：14＋10＋48。所有规则、提示词、示例、资源/集成文档、资产、源码和许可证均收录；41份规则文件全部纳入适用阅读组。逐文件记录见 [upstream/manifest.json](upstream/manifest.json)，原始字节ZIP见 [upstream/archives](upstream/archives/)。浏览镜像将原SKILL.md改名为SKILL.source.md并调整相关Markdown链接，避免额外激活旧技能；另修复noai-flavor中5个继承的坏相对链接，所有变换均逐项列在manifest的mirror_transformations中。ZIP中的原始路径与字节不变。此完整性结论只针对上述固定版本的Git跟踪文件，不包括Git历史、未跟踪文件或链接到的所有第三方项目。
 
 | 项目与作者 | 参考版本 | 上游许可 | 本版采用部分 |
 | --- | --- | --- | --- |
