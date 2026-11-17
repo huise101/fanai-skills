@@ -1,0 +1,17 @@
+# Generated release archive and checksums
+/dist/
+
+# Python/local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local/editor/OS state
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
+.env.*

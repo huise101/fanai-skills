@@ -1,0 +1,26 @@
+反aiskills — license map
+
+Copyright (c) 2026 fanai-skills contributors, for original integration work.
+Upstream authors retain their copyrights; this project is not an official
+release of, or endorsed by, the upstream projects.
+
+1. Skill prose, references, examples, README and original written documentation:
+   Creative Commons Attribution 4.0 International (CC BY 4.0).
+   Full text: skills/fanai-skills/licenses/CC-BY-4.0.txt
+   https://creativecommons.org/licenses/by/4.0/
+
+2. Original Python installer, validation, packaging and test code, and CI:
+   MIT License.
+   Full text: skills/fanai-skills/licenses/MIT.txt
+
+3. Adapted upstream material retains its original grants and notices:
+   anti-defensive-writing-Skill — Copyright (c) 2026 Adkid-Zephyr — MIT
+   academic-humanizer — Copyright (c) 2026 AIScientists-Dev — MIT
+   noai-flavor — Copyright (c) 2026 noai-flavor contributors —
+     MIT for code; CC BY 4.0 for written content
+   humanizer — Copyright (c) 2025 Siqi Chen — MIT
+
+See skills/fanai-skills/NOTICE.md for source links, pinned revisions,
+attribution, modifications and the exact upstream notices in licenses/.
+Retain those notices when redistributing the standalone skill.
+This license map does not revoke or restrict any original upstream grant.
