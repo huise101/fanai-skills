@@ -107,7 +107,7 @@ def write_reading_map(manifest: dict, skill: Path) -> None:
         for path in paths:
             lines.append(f"- [{path}](../upstream/{path})")
         lines.append("")
-    (skill / "references" / "reading-map.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (skill / "references" / "reading-map.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
 def sync(checkouts: dict[str, Path], skill: Path = SKILL) -> dict:
@@ -164,7 +164,7 @@ def sync(checkouts: dict[str, Path], skill: Path = SKILL) -> dict:
     manifest["coverage"] = {"source_count": len(SOURCES), "original_files": sum(len(x["files"]) for x in manifest["sources"]),
                              "rule_files": sum(f["role"] == "rule" for s in manifest["sources"] for f in s["files"]),
                              "archive_count": len(SOURCES)}
-    (base / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (base / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     write_reading_map(manifest, skill)
     errors = verify_bundle(skill)
     if errors:
